@@ -1,0 +1,72 @@
+[
+    {
+        "venue": "customhouse",
+        "date": "09/08/2025",
+        "artist": "The Darkness"
+    },
+    {
+        "venue": "customhouse",
+        "date": "16/08/2025",
+        "artist": "Stiff Little Fingers"
+    },
+    {
+        "venue": "customhouse",
+        "date": "29/08/2025",
+        "artist": "Billy Gillies"
+    },
+    {
+        "venue": "empire",
+        "date": "09/08/2025",
+        "artist": "Times Like These - Foo Fighters Tribute"
+    },
+    {
+        "venue": "empire",
+        "date": "23/08/2025",
+        "artist": "Over 30's Club"
+    },
+    {
+        "venue": "limelight",
+        "date": "01/08/2025",
+        "artist": "The Smyths - Meat is Murder 40th Anniversary"
+    },
+    {
+        "venue": "limelight",
+        "date": "19/08/2025",
+        "artist": "The Lemonheads"
+    },
+    {
+        "venue": "limelight",
+        "date": "24/08/2025",
+        "artist": "DOGHOUSE"
+    },
+    {
+        "venue": "mandela",
+        "date": "22/08/2025",
+        "artist": "Trudy Scrumptious - Night of a Thousand Gagas"
+    },
+    {
+        "venue": "ohyeah",
+        "date": "02/08/2025",
+        "artist": "AOA + Klyda"
+    },
+    {
+        "venue": "ohyeah",
+        "date": "06/09/2025",
+        "artist": "Winemom"
+    },
+    {
+        "venue": "voodoo",
+        "date": "18/08/2025",
+        "artist": "Pyrexia"
+    },
+    {
+        "venue": "voodoo",
+        "date": "02/09/2025",
+        "artist": "Teenage Dads"
+    },
+    {
+        "venue": "voodoo",
+        "date": "13/09/2025",
+        "artist": "Agriculture"
+    }
+]
