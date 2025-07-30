@@ -15,37 +15,57 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>TicketLords!</h1>
-    </header>
-    <div class="topnav">
-        <a class="active" href="homepage.html">Home</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="upcoming.html">Upcoming Gigs</a>
-        <a href="contact.html">Sign-Up</a>
-    </div>
     <main>
-        <div class="banner-search">
-            <label for="venueFilter">Venue:</label>
-            <select id="venueFilter" aria-label="Filter gigs by venue">
-                <option value="all">All Venues</option>
-                <option value="customhouse">Custom House Square</option>
-                <option value="empire">Empire Music Hall</option>
-                <option value="limelight">LimeLight</option>
-                <option value="mandela">Mandela Hall</option>
-                <option value="ohyeah">Oh Yeah Music Centre</option>
-                <option value="voodoo">Voodoo</option>
-            </select>
-            <label for="dateFilter">Date:</label>
-            <input type="text" id="dateFilter" aria-label="Filter gigs by date">
-            <label for="searchBoth">Search:</label>
-            <input type="text" id="searchBoth" aria-label="Search by artist, event or venue">
+        <header id="mainHeader">
+            <div class="logo-nav">
+                <h1 id="logo">TicketLords!</h1>
+                <nav class="topnav">
+                    <a href="cw2/homepage.html">Home</a>
+                    <a href="cw2/aboutus.html">About Us</a>
+                    <a href="cw2/upcoming.html">Upcoming Gigs</a>
+                    <a href="cw2/contact.html">Sign-Up</a>
+                </nav>
+            </div>
+        </header>
+        <h2>Upcoming Gigs!</h2>
+        <section id="carouselContainer" aria-label="Featured Gigs Carousel">
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                <!-- slides inserted dynamically here -->
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="gigFilters">
+            <h2>Find Your Gig!</h2>
+            <form id="filterForm">
+                <label for="venueFilter">Venue:</label>
+                <select id="venueFilter" aria-label="Filter gigs by venue">
+                    <option value="all">All Venues</option>
+                    <option value="customhouse">Custom House Square</option>
+                    <option value="empire">Empire Music Hall</option>
+                    <option value="limelight">LimeLight</option>
+                    <option value="mandela">Mandela Hall</option>
+                    <option value="ohyeah">Oh Yeah Music Centre</option>
+                    <option value="voodoo">Voodoo</option>
+                </select>
+
+                <label for="dateFilter">Date:</label>
+                <input type="text" id="dateFilter" aria-label="Filter gigs by date">
+
+                <label for="searchBoth">Search:</label>
+                <input type="text" id="searchBoth" aria-label="Search by artist, event or venue">
+
+                <button type="button" id="clearFilters">Clear</button>
+            </form>
+
             <div id="gigList" aria-live="polite"></div>
-        </div>
+        </section>
     </main>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

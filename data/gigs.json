@@ -1,0 +1,86 @@
+[
+    {
+        "venue": "customhouse",
+        "date": "09/08/2025",
+        "artist": "The Darkness",
+        "image": "darkness.jpg"
+    },
+    {
+        "venue": "customhouse",
+        "date": "16/08/2025",
+        "artist": "Stiff Little Fingers",
+        "image": "stifflittlefingers.jpg"
+    },
+    {
+        "venue": "customhouse",
+        "date": "29/08/2025",
+        "artist": "Billy Gillies",
+        "image": "billygillies.jpg"
+    },
+    {
+        "venue": "empire",
+        "date": "09/08/2025",
+        "artist": "Times Like These - Foo Fighters Tribute",
+        "image": "timeslikethese.jpg"
+    },
+    {
+        "venue": "empire",
+        "date": "23/08/2025",
+        "artist": "Over 30's Club",
+        "image": "over30sclub.png"
+    },
+    {
+        "venue": "limelight",
+        "date": "01/08/2025",
+        "artist": "The Smyths - Meat is Murder 40th Anniversary",
+        "image": "thesmyths.jpg"
+    },
+    {
+        "venue": "limelight",
+        "date": "19/08/2025",
+        "artist": "The Lemonheads",
+        "image": "thelemonheads.jpg"
+    },
+    {
+        "venue": "limelight",
+        "date": "24/08/2025",
+        "artist": "DOGHOUSE",
+        "image": "doghouse.jpg"
+    },
+    {
+        "venue": "mandela",
+        "date": "22/08/2025",
+        "artist": "Trudy Scrumptious - Night of a Thousand Gagas",
+        "image": "trudi.jpg"
+    },
+    {
+        "venue": "ohyeah",
+        "date": "02/08/2025",
+        "artist": "AOA + Klyda",
+        "image": "aoa.jpg"
+    },
+    {
+        "venue": "ohyeah",
+        "date": "06/09/2025",
+        "artist": "Winemom",
+        "image": "winemom.jpg"
+    },
+    {
+        "venue": "voodoo",
+        "date": "18/08/2025",
+        "artist": "Pyrexia",
+        "image": "pyrexia.jpg"
+    },
+    {
+        "venue": "voodoo",
+        "date": "02/09/2025",
+        "artist": "Teenage Dads",
+        "image": "teenagedads.jpg"
+    },
+    {
+        "venue": "voodoo",
+        "date": "13/09/2025",
+        "artist": "Agriculture",
+        "image": "agriculture.jpg"
+    }
+]
