@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Movement</title>
+    <link rel="stylesheet" href="../css/formPage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" type="image/png" href="../public/images/lord.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Join the Movement</h1>
+        <img src="../public/images/lord.png" alt="Lord of the Rings Logo" class="logo">
+
+        <form id="joinForm">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="e.g. John" required>
+
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" placeholder="e.g. Doe" required>
+
+            <label>Select the Months You're Available</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="january" class="month-checkbox" value="January">
+                <label for="january">January</label>
+
+                <input type="checkbox" id="february" class="month-checkbox" value="February">
+                <label for="february">February</label>
+
+                <input type="checkbox" id="march" class="month-checkbox" value="March">
+                <label for="march">March</label>
+
+                <input type="checkbox" id="april" class="month-checkbox" value="April">
+                <label for="april">April</label>
+
+                <input type="checkbox" id="may" class="month-checkbox" value="May">
+                <label for="may">May</label>
+
+                <input type="checkbox" id="june" class="month-checkbox" value="June">
+                <label for="june">June</label>
+
+                <input type="checkbox" id="july" class="month-checkbox" value="July">
+                <label for="july">July</label>
+
+                <input type="checkbox" id="august" class="month-checkbox" value="August">
+                <label for="august">August</label>
+
+                <input type="checkbox" id="september" class="month-checkbox" value="September">
+                <label for="september">September</label>
+
+                <input type="checkbox" id="october" class="month-checkbox" value="October">
+                <label for="october">October</label>
+
+                <input type="checkbox" id="november" class="month-checkbox" value="November">
+                <label for="november">November</label>
+
+                <input type="checkbox" id="december" class="month-checkbox" value="December">
+                <label for="december">December</label>
+            </div>        
+            
+            <div id="selectedMonthsContainer">
+                <label>Selected Months:</label>
+                <div id="selectedMonths"></div>
+            </div>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+
+            <button type="submit" id="submitBtn">Let's Go!</button>
+        </form>
+
+        <div id="formMessage"></div>
+    </div>
+
+    <script src="../js/formPage.js"></script>
+</body>
+</html>
