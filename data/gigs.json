@@ -3,84 +3,104 @@
         "venue": "customhouse",
         "date": "09/08/2025",
         "artist": "The Darkness",
-        "image": "darkness.jpg"
+        "genre": "rock",
+        "image": "darkness.jpg",
+        "featured": true
     },
     {
         "venue": "customhouse",
         "date": "16/08/2025",
         "artist": "Stiff Little Fingers",
+        "genre": "rock",
         "image": "stifflittlefingers.jpg"
     },
     {
         "venue": "customhouse",
         "date": "29/08/2025",
         "artist": "Billy Gillies",
+        "genre": "edm",
         "image": "billygillies.jpg"
     },
     {
         "venue": "empire",
         "date": "09/08/2025",
         "artist": "Times Like These - Foo Fighters Tribute",
+        "genre": "rock",
         "image": "timeslikethese.jpg"
     },
     {
         "venue": "empire",
         "date": "23/08/2025",
         "artist": "Over 30's Club",
-        "image": "over30sclub.png"
+        "genre": "edm",
+        "image": "over30sclub.jpg"
     },
     {
         "venue": "limelight",
         "date": "01/08/2025",
         "artist": "The Smyths - Meat is Murder 40th Anniversary",
+        "genre": "rock",
         "image": "thesmyths.jpg"
     },
     {
         "venue": "limelight",
         "date": "19/08/2025",
         "artist": "The Lemonheads",
+        "genre": "rock",
         "image": "thelemonheads.jpg"
     },
     {
         "venue": "limelight",
         "date": "24/08/2025",
         "artist": "DOGHOUSE",
-        "image": "doghouse.jpg"
+        "genre": "ska",
+        "image": "doghouse.jpg",
+        "featured": true
     },
     {
         "venue": "mandela",
         "date": "22/08/2025",
         "artist": "Trudy Scrumptious - Night of a Thousand Gagas",
+        "genre": "pop",
         "image": "trudi.jpg"
     },
     {
         "venue": "ohyeah",
         "date": "02/08/2025",
         "artist": "AOA + Klyda",
-        "image": "aoa.jpg"
+        "genre": "pop",
+        "image": "aoa.jpg",
+        "featured": true
     },
     {
         "venue": "ohyeah",
         "date": "06/09/2025",
         "artist": "Winemom",
-        "image": "winemom.jpg"
+        "genre": "indie",
+        "image": "winemom.jpg",
+        "featured": true
     },
     {
         "venue": "voodoo",
         "date": "18/08/2025",
         "artist": "Pyrexia",
+        "genre": "metal",
         "image": "pyrexia.jpg"
     },
     {
         "venue": "voodoo",
         "date": "02/09/2025",
         "artist": "Teenage Dads",
-        "image": "teenagedads.jpg"
+        "genre": "rock",
+        "image": "teenagedads.jpg",
+        "featured": true
     },
     {
         "venue": "voodoo",
         "date": "13/09/2025",
         "artist": "Agriculture",
-        "image": "agriculture.jpg"
+        "genre": "metal",
+        "image": "agriculture.jpg",
+        "featured": true
     }
 ]

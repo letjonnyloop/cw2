@@ -1,71 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Lords</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Lords</title>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- jQuery UI library -->
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <!-- jQuery UI (for date picker) -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
 
-    <!-- jQuery UI CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/homepage.css" />
 </head>
 <body>
-    <main>
-        <header id="mainHeader">
-            <div class="logo-nav">
-                <h1 id="logo">TicketLords!</h1>
-                <nav class="topnav">
-                    <a href="cw2/homepage.html">Home</a>
-                    <a href="cw2/aboutus.html">About Us</a>
-                    <a href="cw2/upcoming.html">Upcoming Gigs</a>
-                    <a href="cw2/contact.html">Sign-Up</a>
-                </nav>
-            </div>
-        </header>
-        <h2>Upcoming Gigs!</h2>
-        <section id="carouselContainer" aria-label="Featured Gigs Carousel">
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                <!-- slides inserted dynamically here -->
-                </ul>
-            </div>
+  <header id="mainHeader">
+    <div class="logo-nav">
+      <h1 id="logo">TicketLords!</h1>
+      <nav class="topnav">
+        <a href="cw2/homepage.html" class="active">Home</a>
+        <a href="cw2/aboutus.html">About Us</a>
+        <a href="cw2/upcoming.html">Upcoming Gigs</a>
+        <a href="cw2/contact.html">Sign-Up</a>
+      </nav>
+    </div>
+  </header>
 
+  <!-- 🎤 Featured Carousel -->
+  <section class="hero-carousel" aria-label="Featured Gigs Carousel">
+    <div class="slide active">
+      <img src="img/foo_fighters.jpg" alt="Foo Fighters performing live in Belfast">
+      <div class="overlay">
+        <h2>Foo Fighters – Live in Belfast</h2>
+        <button type="button">View Event</button>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img/billie_eilish.jpg" alt="Billie Eilish performing on tour">
+      <div class="overlay">
+        <h2>Billie Eilish – November Tour</h2>
+        <button type="button">View Event</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎟️ Gig Filters -->
+  <section id="gigFilters">
+    <h2>Find Your Gig</h2>
+    <form id="filterForm" aria-label="Gig filter form">
+
+      <label for="genre-filter">Genres:</label>
+      <select id="genre-filter">
+        <option value="">All Genres</option>
+        <option value="rock">Rock</option>
+        <option value="pop">Pop</option>
+        <option value="ska">SKA</option>
+        <option value="edm">EDM</option>
+        <option value="indie">Indie</option>
+        <option value="metal">Metal</option>
+      </select>
+
+      <label for="venueFilter">Venue:</label>
+      <select id="venueFilter" name="venueFilter">
+        <option value="">All Venues</option>
+        <option value="customhouse">Custom House Square</option>
+        <option value="empire">Empire Music Hall</option>
+        <option value="limelight">LimeLight</option>
+        <option value="mandela">Mandela Hall</option>
+        <option value="ohyeah">Oh Yeah Music Centre</option>
+        <option value="voodoo">Voodoo</option>
+      </select>
+
+      <label for="dateFilter">Date:</label>
+      <input type="text" id="dateFilter" name="dateFilter" placeholder="dd/mm/yyyy" aria-label="Select date" />
+
+      <label for="searchBoth">Search:</label>
+      <input type="text" id="searchBoth" name="searchBoth" placeholder="Artist, event or venue" aria-label="Search gigs" />
+
+      <button type="button" id="clearFilters">Clear</button>
+    </form>
+
+    <!-- 🎫 Gigs List -->
+    <div id="gigList" aria-live="polite"></div>
+
+    <!-- Load More button -->
+    <div class="load-more-container" style="text-align: center; margin-bottom: 3rem;">
+      <button id="loadMoreBtn" type="button">Load More Gigs</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="mainFooter">
+      <div class="footer-content">
+        <section class="about-us">
+          <h2>About TicketLords</h2>
+          <p>We bring you the best gigs and live events around Belfast. Discover your next favorite band with us!</p>
         </section>
-
-        <section id="gigFilters">
-            <h2>Find Your Gig!</h2>
-            <form id="filterForm">
-                <label for="venueFilter">Venue:</label>
-                <select id="venueFilter" aria-label="Filter gigs by venue">
-                    <option value="all">All Venues</option>
-                    <option value="customhouse">Custom House Square</option>
-                    <option value="empire">Empire Music Hall</option>
-                    <option value="limelight">LimeLight</option>
-                    <option value="mandela">Mandela Hall</option>
-                    <option value="ohyeah">Oh Yeah Music Centre</option>
-                    <option value="voodoo">Voodoo</option>
-                </select>
-
-                <label for="dateFilter">Date:</label>
-                <input type="text" id="dateFilter" aria-label="Filter gigs by date">
-
-                <label for="searchBoth">Search:</label>
-                <input type="text" id="searchBoth" aria-label="Search by artist, event or venue">
-
-                <button type="button" id="clearFilters">Clear</button>
-            </form>
-
-            <div id="gigList" aria-live="polite"></div>
+        <section class="spotify-player">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2PQxoJv3cO1U6SDWZCWtB3?utm_source=generator" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </section>
-    </main>
-    <script src="js/main.js"></script>
+      </div>
+    </footer>
+
+
+  <!-- JS -->
+  <script src="js/homepage.js"></script>
 </body>
 </html>
