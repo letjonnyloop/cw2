@@ -1,0 +1,93 @@
+{
+    "lookAtThis": [
+        {
+            "title": "Féile an Phobail 2025",
+            "image": "images/feile.jpg",
+            "summary": "Ireland's biggest community arts festival is nearly here, read more for all the craic.",
+            "content": "",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "Legends Never Die",
+            "image": "images/ozzy.jpg",
+            "summary": "The Prince of Darkness may be gone but he leaves behind one hell of a legacy.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "Looking back at TradFest",
+            "image": "images/tradfest.jpg",
+            "summary": "Bigger than ever, TradFest wasn't just a hit, it smashed it clean out of the park!",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "Venue of the Month",
+            "image": "images/reporter.jpg",
+            "summary": "Hosting all sorts of live music in the heart of Belfast's gay district.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        }
+    ],
+    "whatsHappenin": [
+        {
+            "title": "Féile Trad Trail brings the craic back into the city centre.",
+            "image": "images/image.jpg",
+            "summary": "This is the first thing you should look at.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "Pour Out Your Heart - Your Guide to Local Open Mic Nights.",
+            "image": "images/image.jpg",
+            "summary": "This is the first thing you should look at.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "Tributes, Get your Tributes!",
+            "image": "images/image.jpg",
+            "summary": "This is the first thing you should look at.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "Belfast Mela To Bring The Colour!",
+            "image": "images/image.jpg",
+            "summary": "This is the first thing you should look at.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        }
+    ],
+    "outnAbout": [
+        {
+            "image": "images/voodoo-1.jpg",
+            "caption": "Something cool",
+            "alt": "Something also cool"
+        },
+        {
+            "image": "images/pride2025-1.jpg",
+            "caption": "Something cool",
+            "alt": "Something also cool"
+        },
+        {
+            "image": "images/pride2025-2.jpg",
+            "caption": "Something cool",
+            "alt": "Something also cool"
+        },
+        {
+            "image": "images/pride2025-3.jpg",
+            "caption": "Something cool",
+            "alt":"Something also cool"
+        }
+    ]
+
+}

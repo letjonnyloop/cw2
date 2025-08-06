@@ -41,7 +41,7 @@ $(document).ready(function () {
   $("#dateFilter").datepicker({ dateFormat: "dd/mm/yy" });
 });
 
-// 🎸 Display gigs in paginated chunks, append if 'append' true
+// Display gigs in paginated chunks, append if 'append' true
 function displayGigsPaginated(gigs, start, count, append = false) {
   const gigList = $("#gigList");
   const gigsToShow = gigs.slice(start, start + count);
@@ -77,7 +77,7 @@ function displayGigsPaginated(gigs, start, count, append = false) {
   }
 }
 
-// 🎯 Filter gigs based on inputs and reset pagination
+// Filter gigs based on inputs and reset pagination
 function applyFilters() {
   const venue = $("#venueFilter").val().toLowerCase();
   const date = $("#dateFilter").val();
@@ -99,10 +99,10 @@ function applyFilters() {
   displayGigsPaginated(filteredGigs, currentIndex, gigsPerPage);
 }
 
-// 🌟 Dynamic featured gigs carousel (unchanged)
+// Dynamic featured gigs carousel (unchanged)
 function renderFeaturedCarousel(data) {
   const featuredGigs = data.filter(gig => gig.featured);
-  const carousel = $(".hero-carousel");
+  const carousel = $(".carousel");
   carousel.empty(); // Clear existing
 
   if (featuredGigs.length === 0) {
@@ -127,10 +127,10 @@ function renderFeaturedCarousel(data) {
   rotateSlides(); // Optional auto-rotation
 }
 
-// 🔁 Carousel auto-rotation every 5s (unchanged)
+// Carousel auto-rotation every 5s (unchanged)
 function rotateSlides() {
   let currentIndex = 0;
-  const slides = $(".hero-carousel .slide");
+  const slides = $(".carousel .slide");
 
   if (slides.length <= 1) return;
 
@@ -141,7 +141,7 @@ function rotateSlides() {
   }, 5000);
 }
 
-// 🎭 Format venue key to readable name (unchanged)
+// Format venue key to readable name (unchanged)
 function formatVenueName(key) {
   switch (key) {
     case "customhouse": return "Custom House Square";
@@ -154,7 +154,7 @@ function formatVenueName(key) {
   }
 }
 
-// ✨ Capitalize strings (e.g., genre) (unchanged)
+// Capitalize strings (e.g., genre) (unchanged)
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
