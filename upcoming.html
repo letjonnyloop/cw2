@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Gigs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/upcoming.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/upcoming.js" defer></script>
+    
+</head>
+<body>
+    
+        <header id="main-header">
+        <div class="logo-nav">
+            <h1 id="logo">TicketLord!</h1>
+            <nav class="topnav">
+            <a href="cw2/homepage.html">Home</a>
+            <a href="cw2/aboutus.html">About Us</a>
+            <a href="cw2/upcoming.html" class="active">Upcoming Gigs</a>
+            <a href="cw2/contact.html">Sign-Up</a>
+            </nav>
+        </div>
+        </header>
+
+    <main>
+
+        <section id="gig-filter">
+            <h2 id="filter-header">Find Your Gig</h2>
+            <form id="filter-form" aria-label="Gig filter form">
+                
+                <!-- Genre Filter -->
+                <label for="genre-filter">Genres:</label>
+                <select id="genre-filter" name="genre-filter">
+                <option value="">All Genres</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="ska">SKA</option>
+                <option value="edm">EDM</option>
+                <option value="indie">Indie</option>
+                <option value="metal">Metal</option>
+                </select>
+
+                <!-- Venue Filter -->
+                <label for="venueFilter">Venue:</label>
+                <select id="venueFilter" name="venueFilter">
+                <option value="">All Venues</option>
+                <option value="customhouse">Custom House Square</option>
+                <option value="empire">Empire Music Hall</option>
+                <option value="limelight">LimeLight</option>
+                <option value="mandela">Mandela Hall</option>
+                <option value="ohyeah">Oh Yeah Music Centre</option>
+                <option value="voodoo">Voodoo</option>
+                </select>
+
+                <!-- Date Filter -->
+                <label for="dateFilter">Date:</label>
+                <input 
+                type="text" 
+                id="dateFilter" 
+                name="dateFilter" 
+                placeholder="dd/mm/yyyy" 
+                aria-label="Select date" 
+                />
+                <!-- Text Search -->
+                <div class="search-row">
+                    <label for="searchBoth">Search:</label>
+                    <input type="text" id="searchBoth" name="searchBoth" placeholder="Artist, event or venue" aria-label="Search gigs" />
+                    <button type="button" id="clearFilters">Clear</button>
+                </div>
+            </form>
+            <p id="number-of-results">Showing (6) Gigs</p>
+            
+        </section>
+
+
+        <section id="upcoming-gigs-section">
+            <div class="u-expanded-width u-grey-5 u-shape u-shape-rectangle u-shape-1"></div>
+            <div class="gig-list-container">
+                <div class="gig-list-wrapper">
+ 
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+            <footer id="mainFooter">
+            <div class="footer-content">
+                <section class="about-us">
+                <h2>About TicketLord</h2>
+                <p>We bring you the best gigs and live events around Belfast. Discover your next favorite band with us!</p>
+                </section>
+                <section class="spotify-player">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2PQxoJv3cO1U6SDWZCWtB3?utm_source=generator" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </section>
+            </div>
+        </footer>
+    
+</body>
+</html>
