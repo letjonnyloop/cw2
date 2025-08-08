@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  // === Modal Events ===
+  $(document).on("click", ".close-modal", closeModal);
+  $(document).on("click", ".modal-overlay", function (e) {
+    if (e.target === this) closeModal();
+  });
+
   // === Load carousel from gigs.json ===
   $.getJSON("data/gigs.json", function (data) {
     renderFeaturedCarousel(data);
@@ -6,43 +12,104 @@ $(document).ready(function () {
 
   // === Load articles from article.json ===
   $.getJSON("data/article.json", function (data) {
-    // Look At This
-    data.lookAtThis.forEach(article => {
-      const card = `
-        <div class="article-card">
-          <img src="${article.image}" alt="${article.title}">
-          <div class="article-content">
-            <h3>${article.title}</h3>
-            <p>${article.summary}</p>
-          </div>
-        </div>
-      `;
-      $('#featuredArticlesContainer').append(card);
-    });
-
-    // What's Happenin'
-    data.whatsHappenin.forEach(article => {
-      const item = `
-        <div class="article-list-item">
-          <h4>${article.title}</h4>
-          <p>${article.summary}</p>
-        </div>
-      `;
-      $('#whatsHappeninContainer').append(item);
-    });
-
-    // Out 'n About Gallery
-    data.outnAbout.forEach(photo => {
-      const image = `
-        <img src="${photo.image}" alt="${photo.alt}" title="${photo.caption}">
-      `;
-      $('#outnAboutImages').append(image);
-    });
+    renderLookAtThis(data.lookAtThis);
+    renderWhatsHappenin(data.whatsHappenin);
+    renderOutnAbout(data.outnAbout);
   });
 });
 
+// === Look At This Articles ===
+function renderLookAtThis(articles) {
+  const container = $('#featuredArticlesContainer');
+  container.empty();
 
-// === Featured Carousel from gigs.json ===
+  articles.forEach(article => {
+    const card = `
+      <div class="article-card" data-article='${JSON.stringify(article)}'>
+        <img src="${article.image}" alt="${article.title}">
+        <div class="article-details">
+          <h3>${article.title}</h3>
+          <p>${article.summary}</p>
+        </div>
+      </div>
+    `;
+    container.append(card);
+  });
+}
+
+// === What's Happenin ===
+function renderWhatsHappenin(articles) {
+  const container = $('#whatsHappeninContainer');
+  container.empty();
+
+  articles.forEach(article => {
+    const item = `
+      <div class="article-card" data-article='${JSON.stringify(article)}'>
+        <h4>${article.title}</h4>
+        <p>${article.summary}</p>
+      </div>
+    `;
+    container.append(item);
+  });
+}
+
+// === Out 'n About Gallery ===
+function renderOutnAbout(images) {
+  const container = $('#outnAboutImages');
+  container.empty();
+
+  images.forEach(img => {
+    const item = `
+      <div class="gallery-item" data-image='${JSON.stringify(img)}'>
+        <img src="${img.image}" alt="${img.alt}">
+        <p class="caption">${img.caption}</p>
+      </div>
+    `;
+    container.append(item);
+  });
+}
+
+// === Modal Triggers ===
+$(document).on("click", ".article-card", function () {
+  const article = $(this).data("article");
+
+  const modalHTML = `
+    <div class="modal-article">
+      <img class="modal-article-image" src="${article.image}" alt="${article.title}">
+      <div class="modal-article-content">
+        <h2>${article.title}</h2>
+        <p class="modal-article-meta"><em>By ${article.author} – ${article.date}</em></p>
+        <div class="modal-article-body">
+          <p>${article.content}</p>
+        </div>
+      </div>
+    </div>
+  `;
+
+  openModal(modalHTML);
+});
+
+
+$(document).on("click", ".gallery-item", function () {
+  const img = $(this).data("image");
+  const html = `
+    <img src="${img.image}" alt="${img.alt}">
+    <p style="text-align:center; font-style:italic; color: var(--text-muted);">${img.caption}</p>
+  `;
+  openModal(html);
+});
+
+// === Modal Functions ===
+function openModal(contentHTML) {
+  $("#modalContent").html(contentHTML); // Ensure your modal has this ID!
+  $("#articleModal").fadeIn(200);
+}
+
+function closeModal() {
+  $("#articleModal").fadeOut(200);
+}
+
+// === Featured Carousel ===
 function renderFeaturedCarousel(data) {
   const featuredGigs = data.filter(gig => gig.featured);
   const carousel = $(".carousel");
@@ -69,8 +136,7 @@ function renderFeaturedCarousel(data) {
   rotateSlides();
 }
 
-
-// === Auto-Rotate Carousel Slides ===
+// === Carousel Rotation ===
 function rotateSlides() {
   let currentIndex = 0;
   const slides = $(".carousel .slide");
@@ -84,8 +150,7 @@ function rotateSlides() {
   }, 5000);
 }
 
-
-// === Helper: Format Venue Name ===
+// === Venue Formatting ===
 function formatVenueName(key) {
   switch (key) {
     case "customhouse": return "Custom House Square";
