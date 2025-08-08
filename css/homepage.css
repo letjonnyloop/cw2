@@ -243,11 +243,34 @@ body {
   text-shadow: 0 0 4px var(--gold);
 }
 
+.article-card h4 {
+  margin-top: 0;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.4rem; /* or whatever size fits */
+  color: var(--gold);
+  text-shadow: 0 0 4px var(--gold);
+}
+
 .article-card p {
   font-size: 1rem;
   color: var(--text-muted);
   margin-top: 0.5rem;
   line-height: 1.5;
+}
+
+.article-title {
+  font-family: 'Anton', sans-serif;
+  color: var(--cyan);
+  text-shadow: 0 0 6px var(--cyan);
+  margin-top: 0;
+}
+
+.article-card .article-title {
+  font-size: 1.4rem;  /* card titles */
+}
+
+#modalTitle.article-title {
+  font-size: 2rem;    /* modal title */
 }
 
 /* === "What's Happenin'" List Style === */
@@ -365,6 +388,13 @@ body {
   max-height: 90vh;
 }
 
+.modal-content h4 {
+  margin-top: 0;
+  font-family: 'Anton', sans-serif;
+  color: var(--cyan);
+  text-shadow: 0 0 6px var(--cyan);
+}
+
 .close-modal {
   position: absolute;
   top: 1rem;
@@ -384,6 +414,14 @@ body {
 .modal-content h2 {
   margin-top: 0;
   color: var(--gold);
+}
+
+.modal-article-title {
+  font-family: 'Anton', sans-serif;
+  color: var(--gold);
+  text-shadow: 0 0 4px var(--gold);
+  margin-top: 0;
+  font-size: 2rem; /* bigger size for modal */
 }
 
 /* === Misc === */

@@ -36,7 +36,15 @@
     "whatsHappenin": [
         {
             "title": "Féile Trad Trail brings the craic back into the city centre.",
-            "image": "images/image.jpg",
+            "image": "images/feile.jpg",
+            "summary": "This is the first thing you should look at.",
+            "content": "This is the content of the first thing you should look at.",
+            "author": "Whoever wrote it",
+            "date": "2023-04-20"
+        },
+        {
+            "title": "There. Will. Be. BLOOD!",
+            "image": "images/ghoul.jpg",
             "summary": "This is the first thing you should look at.",
             "content": "This is the content of the first thing you should look at.",
             "author": "Whoever wrote it",
@@ -44,7 +52,7 @@
         },
         {
             "title": "Pour Out Your Heart - Your Guide to Local Open Mic Nights.",
-            "image": "images/image.jpg",
+            "image": "images/karaoke.jpg",
             "summary": "This is the first thing you should look at.",
             "content": "This is the content of the first thing you should look at.",
             "author": "Whoever wrote it",
@@ -52,7 +60,7 @@
         },
         {
             "title": "Tributes, Get your Tributes!",
-            "image": "images/image.jpg",
+            "image": "images/tribute.jpg",
             "summary": "This is the first thing you should look at.",
             "content": "This is the content of the first thing you should look at.",
             "author": "Whoever wrote it",
@@ -60,7 +68,7 @@
         },
         {
             "title": "Belfast Mela To Bring The Colour!",
-            "image": "images/image.jpg",
+            "image": "images/mela.jpg",
             "summary": "This is the first thing you should look at.",
             "content": "This is the content of the first thing you should look at.",
             "author": "Whoever wrote it",

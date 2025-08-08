@@ -24,15 +24,16 @@ function renderLookAtThis(articles) {
   container.empty();
 
   articles.forEach(article => {
-    const card = `
-      <div class="article-card" data-article='${JSON.stringify(article)}'>
+    const card = $(`
+      <div class="article-card">
         <img src="${article.image}" alt="${article.title}">
         <div class="article-details">
-          <h3>${article.title}</h3>
+          <h3 class="article-title">${article.title}</h3>
           <p>${article.summary}</p>
         </div>
       </div>
-    `;
+    `);
+    card.data("article", article); // store object safely
     container.append(card);
   });
 }
@@ -45,7 +46,7 @@ function renderWhatsHappenin(articles) {
   articles.forEach(article => {
     const item = `
       <div class="article-card" data-article='${JSON.stringify(article)}'>
-        <h4>${article.title}</h4>
+        <h4 class="article-title">${article.title}</h4>
         <p>${article.summary}</p>
       </div>
     `;
@@ -73,40 +74,43 @@ function renderOutnAbout(images) {
 $(document).on("click", ".article-card", function () {
   const article = $(this).data("article");
 
-  const modalHTML = `
-    <div class="modal-article">
-      <img class="modal-article-image" src="${article.image}" alt="${article.title}">
-      <div class="modal-article-content">
-        <h2>${article.title}</h2>
-        <p class="modal-article-meta"><em>By ${article.author} – ${article.date}</em></p>
-        <div class="modal-article-body">
-          <p>${article.content}</p>
-        </div>
-      </div>
-    </div>
-  `;
+  if (!article) return;
 
-  openModal(modalHTML);
+  // Set modal content
+  $("#modalTitle").text(article.title || "No Title");
+  $("#modalImage").attr({
+    src: article.image || "",
+    alt: article.title || ""
+  });
+
+  $("#modalMeta").text(`By ${article.author || "Unknown"} – ${article.date || ""}`);
+
+  // Use content or fallback text if empty
+  $("#modalBody").html(article.content ? article.content : "<p>No additional content available.</p>");
+
+  // Show modal
+  $("#articleModal").fadeIn(200).addClass("show");
 });
 
-
+// Click handler for gallery images
 $(document).on("click", ".gallery-item", function () {
   const img = $(this).data("image");
-  const html = `
-    <img src="${img.image}" alt="${img.alt}">
-    <p style="text-align:center; font-style:italic; color: var(--text-muted);">${img.caption}</p>
-  `;
-  openModal(html);
+  if (!img) return;
+
+  $("#modalTitle").text(""); // Clear title for gallery images
+  $("#modalImage").attr({
+    src: img.image || "",
+    alt: img.alt || ""
+  });
+  $("#modalMeta").text("");
+  $("#modalBody").html(`<p style="text-align:center; font-style:italic; color: var(--text-muted);">${img.caption || ""}</p>`);
+
+  $("#articleModal").fadeIn(200).addClass("show");
 });
 
 // === Modal Functions ===
-function openModal(contentHTML) {
-  $("#modalContent").html(contentHTML); // Ensure your modal has this ID!
-  $("#articleModal").fadeIn(200);
-}
-
 function closeModal() {
-  $("#articleModal").fadeOut(200);
+  $("#articleModal").fadeOut(200).removeClass("show");
 }
 
 // === Featured Carousel ===
@@ -162,3 +166,7 @@ function formatVenueName(key) {
     default: return key;
   }
 }
+
+$(document).on("click", ".modal-content", function (e) {
+  e.stopPropagation();
+});
