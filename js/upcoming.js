@@ -7,7 +7,6 @@ $(document).ready(function () {
     const $gigsWrapper = $('.gig-list-wrapper');
     const $numberOfResults = $('#number-of-results');
     const $filterForm = $('#filter-form');
-    // const $noResults = $('.no-gigs');
 
     let gigsData;
 
@@ -59,7 +58,8 @@ $(document).ready(function () {
 
     function filterGigs() {
         const venue = $venueFilter.val();
-        const date = $dateFilter.val();
+        const date = $dateFilter.val().toString();
+        const date_formatted = `${date.split('-')[2]}/${date.split('-')[1]}/${date.split('-')[0]}`
         const genre = $genreFilter.val();
         const searchBoth = $searchBoth.val().toLowerCase();
 
@@ -70,7 +70,8 @@ $(document).ready(function () {
         }
 
         if (date !== "") {
-            filteredGigs = filteredGigs.filter(gig => gig.date.includes(date));
+            
+            filteredGigs = filteredGigs.filter(gig => gig.date.toString()===date_formatted);
         }
 
         if (venue !== "") {
@@ -87,6 +88,17 @@ $(document).ready(function () {
 
         displayGigs(filteredGigs);
     }
+
+
+    // Ensure that user can't select dates that are in the past
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    $dateFilter.attr('min', `${yyyy}-${mm}-${dd}`);
+    
 
     // Fetch data and display on load
     $.getJSON('data/gigs.json', function (data) {
