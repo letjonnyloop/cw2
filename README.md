@@ -1,6 +1,6 @@
 # TicketLord
 
-TicketLord is a web application for discovering, filtering, and signing up for live music events in Belfast. Users can browse upcoming gigs, filter by genre, venue, or date, and join the mailing list to receive personalized event updates.
+TicketLord is a web application for discovering, filtering, and signing up for live music events in Belfast. Users can browse upcoming gigs, filter by genre, venue, or date, and join the mailing list to receive personalised event updates.
 
 ## Features
 
@@ -28,7 +28,8 @@ TicketLord is a web application for discovering, filtering, and signing up for l
 - EMAIL_PASS=your-app-password
 
 4. **Start the server**
-- node server.js
+    ```sh
+    node server.js
 
 5. **Run the application**
 The server will start on [http://localhost:5500](http://localhost:5500).
