@@ -107,18 +107,6 @@ body {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .gig-list-wrapper {
     display: flex;
     justify-content: center;
@@ -148,6 +136,11 @@ body {
     cursor: pointer;
 }
 
+.gig-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .act-name {
     font-family: 'Roboto', sans-serif;
@@ -155,7 +148,8 @@ body {
     text-align: center;
     font-weight: bold;
     margin-bottom: 25px;
-    
+    height: 60px;
+    overflow: hidden;
 }
 
 .gig-thumbnail {
@@ -168,6 +162,7 @@ body {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
+    height: 20%
 }
 
 .gig-date-time-venue {
@@ -175,13 +170,14 @@ body {
     font-size: 19px;
     font-weight: revert;
     text-align: left;
+    margin-top: auto;
 }
 
 .line-horizontal {
-  height: 1px;              /* Thin line */
-  background-color: darkgrey;  /* Line color */
-  width: 100%;              /* Full width or set a fixed width */
-  margin: 20px 0;           /* Optional spacing above/below */
+  height: 1px;              
+  background-color: darkgrey;  
+  width: 100%;              
+  margin: 20px 0;         
 }
 
 #upcoming-gigs-title {
@@ -217,7 +213,7 @@ body {
     padding-top: 30px;
     background: linear-gradient(135deg, #d9dee9 0%, #aab9d9 100%);
     border-radius: 14px;
-    padding: 1rem 0rem 1rem 0rem;   /* Ample breathing room */
+    padding: 1rem 0rem 1rem 0rem;   
     box-shadow: 0 4px 18px rgba(88, 129, 246, 0.10);
 }
 
@@ -236,7 +232,6 @@ body {
   transform: scale(1.3);
   display: inline-flex;
   flex-wrap: wrap;
-  /* gap: 1.5rem; */
   align-items: center;
   justify-content: center;
   margin-bottom: 2.5rem;
@@ -292,9 +287,9 @@ body {
 }
 
 #filter-form button:hover {
-  border-color: #4564b0;            /* Slightly darker or themed border */
-  background: linear-gradient(135deg, #728292 0%, #6e778f 100%);        /* Faint bluish background */
-  color: #1a2b50;                   /* Slightly deeper text */
+  border-color: #4564b0;         
+  background: linear-gradient(135deg, #728292 0%, #6e778f 100%);        
+  color: #1a2b50;                  
 }
 
 /* Custom Scrollbar for Inputs */
@@ -362,11 +357,10 @@ body {
   gap: 0.5em;
   margin-top: 1.2em;
   width: 100%;
-  /* Force to start on a new line */
   clear: both;
 }
 
-/* Make all form children (label, select, input) inline except .search-row */
+
 #filter-form > label,
 #filter-form > select,
 #filter-form > input[type="text"] {
@@ -375,7 +369,6 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* Responsive stacking for mobile screens */
 @media (max-width: 600px) {
   .search-row {
     flex-direction: column;
