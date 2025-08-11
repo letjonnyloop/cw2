@@ -8,7 +8,7 @@
     "featured": true,
     "location": "Belfast",
     "time": "8:00 PM",
-    "description": "The Darkness are a flamboyant British rock band, best known for their glam metal influences and powerful vocals."
+    "description": "Get ready for a night of outrageous riffs and high-flying vocals as The Darkness light up Belfast with glam rock swagger."
   },
   {
     "venue": "customhouse",
@@ -18,7 +18,7 @@
     "image": "stifflittlefingers.jpg",
     "location": "Belfast",
     "time": "7:30 PM",
-    "description": "Stiff Little Fingers are punk rock legends from Belfast, blending political lyrics with gritty rock energy."
+    "description": "Homegrown punk heroes blast through decades of anthems in a fiery set packed with grit, politics, and Belfast pride."
   },
   {
     "venue": "customhouse",
@@ -28,7 +28,7 @@
     "image": "billygillies.jpg",
     "location": "Belfast",
     "time": "9:00 PM",
-    "description": "Billy Gillies is a fast-rising EDM producer and DJ, known for uplifting trance anthems and electrifying live sets."
+    "description": "Turn up the volume—Billy Gillies drops euphoric beats and soaring trance melodies for a night of pure dancefloor bliss."
   },
   {
     "venue": "empire",
@@ -38,7 +38,7 @@
     "image": "timeslikethese.jpg",
     "location": "Belfast",
     "time": "8:30 PM",
-    "description": "Times Like These are a top-tier tribute band bringing the raw power and energy of Foo Fighters' rock anthems to the stage."
+    "description": "From Everlong to The Pretender, this powerhouse tribute band delivers Foo Fighters’ biggest hits with arena-level energy."
   },
   {
     "venue": "empire",
@@ -48,6 +48,6 @@
     "image": "over30sclub.jpg",
     "location": "Belfast",
     "time": "10:00 PM",
-    "description": "Over 30’s Club spins nostalgic EDM and dance hits, perfect for a mature crowd ready to rave."
+    "description": "Relive the glory days of the dancefloor—Over 30’s Club serves up classic EDM and party anthems until the small hours."
   }
 ]
