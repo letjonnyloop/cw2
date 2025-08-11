@@ -1,40 +1,56 @@
 [
     {
-        "venue": "customhouse",
-        "date": "09/08/2025",
-        "artist": "The Darkness",
-        "genre": "rock",
-        "image": "darkness.jpg",
-        "featured": true
+      "venue": "customhouse",
+      "date": "09/08/2025",
+      "artist": "The Darkness",
+      "genre": "rock",
+      "image": "darkness.jpg",
+      "featured": true,
+      "location": "Belfast",
+      "time": "8:00 PM",
+      "description": "Get ready for a night of outrageous riffs and high-flying vocals as The Darkness light up Belfast with glam rock swagger."
     },
     {
-        "venue": "customhouse",
-        "date": "16/08/2025",
-        "artist": "Stiff Little Fingers",
-        "genre": "rock",
-        "image": "stifflittlefingers.jpg"
+      "venue": "customhouse",
+      "date": "16/08/2025",
+      "artist": "Stiff Little Fingers",
+      "genre": "rock",
+      "image": "stifflittlefingers.jpg",
+      "location": "Belfast",
+      "time": "7:30 PM",
+      "description": "Homegrown punk heroes blast through decades of anthems in a fiery set packed with grit, politics, and Belfast pride."
     },
     {
-        "venue": "customhouse",
-        "date": "29/08/2025",
-        "artist": "Billy Gillies",
-        "genre": "edm",
-        "image": "billygillies.jpg"
+      "venue": "customhouse",
+      "date": "29/08/2025",
+      "artist": "Billy Gillies",
+      "genre": "edm",
+      "image": "billygillies.jpg",
+      "location": "Belfast",
+      "time": "9:00 PM",
+      "description": "Turn up the volume—Billy Gillies drops euphoric beats and soaring trance melodies for a night of pure dancefloor bliss."
     },
     {
-        "venue": "empire",
-        "date": "09/08/2025",
-        "artist": "Times Like These - Foo Fighters Tribute",
-        "genre": "rock",
-        "image": "timeslikethese.jpg"
+      "venue": "empire",
+      "date": "09/08/2025",
+      "artist": "Times Like These - Foo Fighters Tribute",
+      "genre": "rock",
+      "image": "timeslikethese.jpg",
+      "location": "Belfast",
+      "time": "8:30 PM",
+      "description": "From Everlong to The Pretender, this powerhouse tribute band delivers Foo Fighters’ biggest hits with arena-level energy."
     },
     {
-        "venue": "empire",
-        "date": "23/08/2025",
-        "artist": "Over 30's Club",
-        "genre": "edm",
-        "image": "over30sclub.jpg"
-    },
+      "venue": "empire",
+      "date": "23/08/2025",
+      "artist": "Over 30's Club",
+      "genre": "edm",
+      "image": "over30sclub.jpg",
+      "location": "Belfast",
+      "time": "10:00 PM",
+      "description": "Relive the glory days of the dancefloor—Over 30’s Club serves up classic EDM and party anthems until the small hours."
+    }
+    
     {
         "venue": "limelight",
         "date": "01/08/2025",
