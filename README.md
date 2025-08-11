@@ -52,11 +52,3 @@ You can customize the gig listings by applying one or more filters:
 4. Type any keyword in the search box to narrow results by artist, event, or venue.
 5. View the updated list of gigs that match your filters.
 6. Click **Clear** to reset all filters and start fresh.
-
----
-
-If you want help with adding gigs or managing the site, you would typically edit the backend data source or the JavaScript code that populates the gigs dynamically.
-
----
-
-If you'd like, I can help you write usage instructions for specific parts like the JavaScript or CSS too! Just let me know.
