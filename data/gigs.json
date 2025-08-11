@@ -1,122 +1,156 @@
 [
-    {
-      "venue": "customhouse",
-      "date": "09/08/2025",
-      "artist": "The Darkness",
-      "genre": "rock",
-      "image": "darkness.jpg",
-      "featured": true,
-      "location": "Belfast",
-      "time": "8:00 PM",
-      "description": "Get ready for a night of outrageous riffs and high-flying vocals as The Darkness light up Belfast with glam rock swagger."
-    },
-    {
-      "venue": "customhouse",
-      "date": "16/08/2025",
-      "artist": "Stiff Little Fingers",
-      "genre": "rock",
-      "image": "stifflittlefingers.jpg",
-      "location": "Belfast",
-      "time": "7:30 PM",
-      "description": "Homegrown punk heroes blast through decades of anthems in a fiery set packed with grit, politics, and Belfast pride."
-    },
-    {
-      "venue": "customhouse",
-      "date": "29/08/2025",
-      "artist": "Billy Gillies",
-      "genre": "edm",
-      "image": "billygillies.jpg",
-      "location": "Belfast",
-      "time": "9:00 PM",
-      "description": "Turn up the volume—Billy Gillies drops euphoric beats and soaring trance melodies for a night of pure dancefloor bliss."
-    },
-    {
-      "venue": "empire",
-      "date": "09/08/2025",
-      "artist": "Times Like These - Foo Fighters Tribute",
-      "genre": "rock",
-      "image": "timeslikethese.jpg",
-      "location": "Belfast",
-      "time": "8:30 PM",
-      "description": "From Everlong to The Pretender, this powerhouse tribute band delivers Foo Fighters’ biggest hits with arena-level energy."
-    },
-    {
-      "venue": "empire",
-      "date": "23/08/2025",
-      "artist": "Over 30's Club",
-      "genre": "edm",
-      "image": "over30sclub.jpg",
-      "location": "Belfast",
-      "time": "10:00 PM",
-      "description": "Relive the glory days of the dancefloor—Over 30’s Club serves up classic EDM and party anthems until the small hours."
-    }
-    
-    {
-        "venue": "limelight",
-        "date": "01/08/2025",
-        "artist": "The Smyths - Meat is Murder 40th Anniversary",
-        "genre": "rock",
-        "image": "thesmyths.jpg"
-    },
-    {
-        "venue": "limelight",
-        "date": "19/08/2025",
-        "artist": "The Lemonheads",
-        "genre": "rock",
-        "image": "thelemonheads.jpg"
-    },
-    {
-        "venue": "limelight",
-        "date": "24/08/2025",
-        "artist": "DOGHOUSE",
-        "genre": "ska",
-        "image": "doghouse.jpg",
-        "featured": true
-    },
-    {
-        "venue": "mandela",
-        "date": "22/08/2025",
-        "artist": "Trudy Scrumptious - Night of a Thousand Gagas",
-        "genre": "pop",
-        "image": "trudi.jpg"
-    },
-    {
-        "venue": "ohyeah",
-        "date": "02/08/2025",
-        "artist": "AOA + Klyda",
-        "genre": "pop",
-        "image": "aoa.jpg",
-        "featured": true
-    },
-    {
-        "venue": "ohyeah",
-        "date": "06/09/2025",
-        "artist": "Winemom",
-        "genre": "indie",
-        "image": "winemom.jpg",
-        "featured": true
-    },
-    {
-        "venue": "voodoo",
-        "date": "18/08/2025",
-        "artist": "Pyrexia",
-        "genre": "metal",
-        "image": "pyrexia.jpg"
-    },
-    {
-        "venue": "voodoo",
-        "date": "02/09/2025",
-        "artist": "Teenage Dads",
-        "genre": "rock",
-        "image": "teenagedads.jpg",
-        "featured": true
-    },
-    {
-        "venue": "voodoo",
-        "date": "13/09/2025",
-        "artist": "Agriculture",
-        "genre": "metal",
-        "image": "agriculture.jpg",
-        "featured": true
-    }
+  {
+    "venue": "customhouse",
+    "date": "09/08/2025",
+    "artist": "The Darkness",
+    "genre": "rock",
+    "image": "darkness.jpg",
+    "featured": true,
+    "location": "Belfast",
+    "time": "8:00 PM",
+    "description": "Get ready for a night of outrageous riffs and high-flying vocals as The Darkness light up Belfast with glam rock swagger."
+  },
+  {
+    "venue": "customhouse",
+    "date": "16/08/2025",
+    "artist": "Stiff Little Fingers",
+    "genre": "rock",
+    "image": "stifflittlefingers.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "7:30 PM",
+    "description": "Homegrown punk heroes blast through decades of anthems in a fiery set packed with grit, politics, and Belfast pride."
+  },
+  {
+    "venue": "customhouse",
+    "date": "29/08/2025",
+    "artist": "Billy Gillies",
+    "genre": "edm",
+    "image": "billygillies.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "9:00 PM",
+    "description": "Turn up the volume—Billy Gillies drops euphoric beats and soaring trance melodies for a night of pure dancefloor bliss."
+  },
+  {
+    "venue": "empire",
+    "date": "09/08/2025",
+    "artist": "Times Like These - Foo Fighters Tribute",
+    "genre": "rock",
+    "image": "timeslikethese.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "8:30 PM",
+    "description": "From Everlong to The Pretender, this powerhouse tribute band delivers Foo Fighters’ biggest hits with arena-level energy."
+  },
+  {
+    "venue": "empire",
+    "date": "23/08/2025",
+    "artist": "Over 30's Club",
+    "genre": "edm",
+    "image": "over30sclub.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "10:00 PM",
+    "description": "Relive the glory days of the dancefloor—Over 30’s Club serves up classic EDM and party anthems until the small hours."
+  },
+  {
+    "venue": "limelight",
+    "date": "01/08/2025",
+    "artist": "The Smyths - Meat is Murder 40th Anniversary",
+    "genre": "rock",
+    "image": "thesmyths.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "7:45 PM",
+    "description": "Celebrate 40 years of 'Meat is Murder' with The Smyths, performing the iconic album live in full."
+  },
+  {
+    "venue": "limelight",
+    "date": "19/08/2025",
+    "artist": "The Lemonheads",
+    "genre": "rock",
+    "image": "thelemonheads.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "8:15 PM",
+    "description": "Alternative rock legends The Lemonheads bring their melodic tunes and nostalgic vibes to the stage."
+  },
+  {
+    "venue": "limelight",
+    "date": "24/08/2025",
+    "artist": "DOGHOUSE",
+    "genre": "ska",
+    "image": "doghouse.jpg",
+    "featured": true,
+    "location": "Belfast",
+    "time": "9:00 PM",
+    "description": "Get your ska on with DOGHOUSE, delivering high-energy brass and infectious rhythms all night long."
+  },
+  {
+    "venue": "mandela",
+    "date": "22/08/2025",
+    "artist": "Trudy Scrumptious - Night of a Thousand Gagas",
+    "genre": "pop",
+    "image": "trudi.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "8:30 PM",
+    "description": "Join Trudy Scrumptious for a dazzling tribute to Lady Gaga, celebrating hits and theatrics."
+  },
+  {
+    "venue": "ohyeah",
+    "date": "02/08/2025",
+    "artist": "AOA + Klyda",
+    "genre": "pop",
+    "image": "aoa.jpg",
+    "featured": true,
+    "location": "Belfast",
+    "time": "7:00 PM",
+    "description": "AOA and Klyda team up for an electrifying night of fresh pop sounds and catchy hooks."
+  },
+  {
+    "venue": "ohyeah",
+    "date": "06/09/2025",
+    "artist": "Winemom",
+    "genre": "indie",
+    "image": "winemom.jpg",
+    "featured": true,
+    "location": "Belfast",
+    "time": "8:45 PM",
+    "description": "Winemom delivers introspective indie tunes with heartfelt lyrics and captivating melodies."
+  },
+  {
+    "venue": "voodoo",
+    "date": "18/08/2025",
+    "artist": "Pyrexia",
+    "genre": "metal",
+    "image": "pyrexia.jpg",
+    "featured": false,
+    "location": "Belfast",
+    "time": "9:30 PM",
+    "description": "Pyrexia brings a powerful metal assault with intense riffs and commanding stage presence."
+  },
+  {
+    "venue": "voodoo",
+    "date": "02/09/2025",
+    "artist": "Teenage Dads",
+    "genre": "rock",
+    "image": "teenagedads.jpg",
+    "featured": true,
+    "location": "Belfast",
+    "time": "8:00 PM",
+    "description": "Catch the energetic vibes of Teenage Dads as they deliver punchy rock with youthful spirit."
+  },
+  {
+    "venue": "voodoo",
+    "date": "13/09/2025",
+    "artist": "Agriculture",
+    "genre": "metal",
+    "image": "agriculture.jpg",
+    "featured": true,
+    "location": "Belfast",
+    "time": "9:00 PM",
+    "description": "Agriculture hits the stage with crushing metal riffs and an intense live experience."
+  }
 ]
