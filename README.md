@@ -1,54 +1,41 @@
+# TicketLord
+
+TicketLord is a web application for discovering, filtering, and signing up for live music events in Belfast. Users can browse upcoming gigs, filter by genre, venue, or date, and join the mailing list to receive personalised event updates.
+
 ## Features
 
-### 1. Navigation
+- **Browse Gigs:** View a list of upcoming gigs with artist, venue, date, and genre.
+- **Advanced Filtering:** Filter gigs by genre, venue, date, or search by artist/event.
+- **Sign-Up Form:** Join the mailing list and receive a confirmation email with event info.
+- **About Us:** Get to know our stroy, our mission.
 
-* **Home**: Link to the homepage.
-* **About Us**: Learn about TicketLord.
-* **Upcoming Gigs**: View the current page with gig listings.
-* **Sign-Up**: Navigate to the contact/sign-up page.
+## Setup Instructions
 
----
+1. **Clone the Repository**
+   Run the following command in your project directory:
 
-### 2. Gig Filters (Find Your Gig Section)
+   ```sh
+   git clone https://github.com/letjonnyloop/cw2.git
 
-You can customize the gig listings by applying one or more filters:
+2. **Install Dependencies**
+   Run the following command in your project directory:
 
-* **Genres**: Select from Rock, Pop, Ska, EDM, Indie, Metal, or choose "All Genres" to view every type.
-* **Venue**: Choose a venue from the list including Custom House Square, Empire Music Hall, LimeLight, Mandela Hall, Oh Yeah Music Centre, or Voodoo. "All Venues" shows gigs from all locations.
-* **Date**: Pick a specific date to see gigs scheduled for that day.
-* **Search**: Enter keywords related to the artist, event, or venue to find specific gigs.
-* **Clear Button**: Click the "Clear" button to reset all filters and search inputs.
+   ```sh
+   npm install
+3. **Configure Environment Variables**
+- use .env.example to make your own .env file and replace the following credentials:
+- EMAIL_USER=your-email@gmail.com
+- EMAIL_PASS=your-app-password
 
----
+4. **Start the server**
+    ```sh
+    node server.js
 
-### 3. Gig Listings
+5. **Run the application**
+The server will start on [http://localhost:5500](http://localhost:5500).
 
-* Displays upcoming gigs that match your filter selections.
-* The number of currently shown gigs is displayed above the listings (e.g., "Showing (6) Gigs").
+- Open `homepage.html` in your browser to browse gigs and events.
+- Open `html/formPage.html` for the sign-up form to join the mailing list.
 
----
 
-### 4. Footer
-
-* **About TicketLord**: Brief description of the service.
-* **Spotify Player**: Embedded Spotify playlist to enjoy music while browsing gigs.
-
----
-
-## Technical Notes
-
-* The page uses Google Fonts for styling.
-* jQuery library and a JavaScript file (`upcoming.js`) handle interactivity and filtering.
-* CSS styling is loaded from `css/upcoming.css`.
-* The gig listings area dynamically updates based on your filter choices.
-
----
-
-## How to Use
-
-1. Open the **Upcoming Gigs** page.
-2. Use the dropdowns to select the genre and venue you want.
-3. Select a date if you're looking for gigs on a specific day.
-4. Type any keyword in the search box to narrow results by artist, event, or venue.
-5. View the updated list of gigs that match your filters.
-6. Click **Clear** to reset all filters and start fresh.
+Happy browsing!

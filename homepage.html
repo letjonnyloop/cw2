@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketLord</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/homepage.css"/>
+</head>
+<body>
+    <!-- Header/Nav bar -->
+    <header id="mainHeader">
+        <div class="logo-nav">
+            <h1 id="logo">TicketLord!</h1>
+            <nav class="topnav">
+                <a href="cw2/homepage.html" class="active">Home</a>
+                <a href="cw2/upcoming.html">Upcoming Gigs</a>
+                <a href="cw2/contact.html">Sign-Up</a>
+                <a href="cw2/aboutus.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Featured Carousel -->
+    <section class="carousel" aria-label="Featured gigs carousel">
+        <div class="slide active">
+            <div class="overlay">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Articles -->
+    <section class="articles" aria-label="A list of various music related articles">
+        <div class="lookAtThis">
+            <h2>Look At This</h2>
+            <div class="featuredLookAtThis" id="featuredArticlesContainer">
+            </div>
+        </div>
+        <div class="whatsHappenin">
+            <h2>What's happenin'</h2>
+            <div class="articleList" id="whatsHappeninContainer">
+            </div>
+        </div>
+        <div class="outnAbout">
+            <h2>Out 'n About</h2>
+            <div class="grid" id="outnAboutImages" aria-label="Photos from local underground gigs and events">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="mainFooter">
+        <div class="footer-content">
+            <section class="about-us">
+                <h2>About TicketLord</h2>
+                <p>We bring you the best gigs and live events around Belfast. Discover your next favorite band with us!</p>
+            </section>
+        <section class="spotify-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2PQxoJv3cO1U6SDWZCWtB3?utm_source=generator" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/homepage.js"></script>
+
+    <!-- Modal -->
+    <div id="articleModal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="" />
+            <h2 id="modalTitle" class="modal-article-title"></h2>
+            <p id="modalMeta" class="modal-article-meta"></p>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+</body>
+</html>
