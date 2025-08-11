@@ -1,54 +1,62 @@
-Features
-1. Navigation
-Home: Link to the homepage.
+## Features
 
-About Us: Learn about TicketLord.
+### 1. Navigation
 
-Upcoming Gigs: View the current page with gig listings.
+* **Home**: Link to the homepage.
+* **About Us**: Learn about TicketLord.
+* **Upcoming Gigs**: View the current page with gig listings.
+* **Sign-Up**: Navigate to the contact/sign-up page.
 
-Sign-Up: Navigate to the contact/sign-up page.
+---
 
-2. Gig Filters (Find Your Gig Section)
+### 2. Gig Filters (Find Your Gig Section)
+
 You can customize the gig listings by applying one or more filters:
 
-Genres: Select from Rock, Pop, Ska, EDM, Indie, Metal, or choose "All Genres" to view every type.
+* **Genres**: Select from Rock, Pop, Ska, EDM, Indie, Metal, or choose "All Genres" to view every type.
+* **Venue**: Choose a venue from the list including Custom House Square, Empire Music Hall, LimeLight, Mandela Hall, Oh Yeah Music Centre, or Voodoo. "All Venues" shows gigs from all locations.
+* **Date**: Pick a specific date to see gigs scheduled for that day.
+* **Search**: Enter keywords related to the artist, event, or venue to find specific gigs.
+* **Clear Button**: Click the "Clear" button to reset all filters and search inputs.
 
-Venue: Choose a venue from the list including Custom House Square, Empire Music Hall, LimeLight, Mandela Hall, Oh Yeah Music Centre, or Voodoo. "All Venues" shows gigs from all locations.
+---
 
-Date: Pick a specific date to see gigs scheduled for that day.
+### 3. Gig Listings
 
-Search: Enter keywords related to the artist, event, or venue to find specific gigs.
+* Displays upcoming gigs that match your filter selections.
+* The number of currently shown gigs is displayed above the listings (e.g., "Showing (6) Gigs").
 
-Clear Button: Click the "Clear" button to reset all filters and search inputs.
+---
 
-3. Gig Listings
-Displays upcoming gigs that match your filter selections.
+### 4. Footer
 
-The number of currently shown gigs is displayed above the listings (e.g., "Showing (6) Gigs").
+* **About TicketLord**: Brief description of the service.
+* **Spotify Player**: Embedded Spotify playlist to enjoy music while browsing gigs.
 
-4. Footer
-About TicketLord: Brief description of the service.
+---
 
-Spotify Player: Embedded Spotify playlist to enjoy music while browsing gigs.
+## Technical Notes
 
-Technical Notes
-The page uses Google Fonts for styling.
+* The page uses Google Fonts for styling.
+* jQuery library and a JavaScript file (`upcoming.js`) handle interactivity and filtering.
+* CSS styling is loaded from `css/upcoming.css`.
+* The gig listings area dynamically updates based on your filter choices.
 
-jQuery library and a JavaScript file (upcoming.js) handle interactivity and filtering.
+---
 
-CSS styling is loaded from css/upcoming.css.
+## How to Use
 
-The gig listings area dynamically updates based on your filter choices.
+1. Open the **Upcoming Gigs** page.
+2. Use the dropdowns to select the genre and venue you want.
+3. Select a date if you're looking for gigs on a specific day.
+4. Type any keyword in the search box to narrow results by artist, event, or venue.
+5. View the updated list of gigs that match your filters.
+6. Click **Clear** to reset all filters and start fresh.
 
-How to Use
-Open the Upcoming Gigs page.
+---
 
-Use the dropdowns to select the genre and venue you want.
+If you want help with adding gigs or managing the site, you would typically edit the backend data source or the JavaScript code that populates the gigs dynamically.
 
-Select a date if you're looking for gigs on a specific day.
+---
 
-Type any keyword in the search box to narrow results by artist, event, or venue.
-
-View the updated list of gigs that match your filters.
-
-Click Clear to reset all filters and start fresh.
+If you'd like, I can help you write usage instructions for specific parts like the JavaScript or CSS too! Just let me know.
