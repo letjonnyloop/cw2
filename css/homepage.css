@@ -151,27 +151,6 @@ body {
   text-shadow: 0 0 8px var(--gold);
 }
 
-.overlay button {
-  pointer-events: auto;
-  margin-top: 0.7rem;
-  padding: 0.7rem 1.5rem;
-  background-color: transparent;
-  border: 2px solid var(--cyan);
-  border-radius: 8px;
-  font-weight: 700;
-  color: var(--cyan);
-  cursor: pointer;
-  transition: all 0.4s ease;
-  font-family: 'Anton', sans-serif;
-}
-
-.overlay button:hover {
-  background-color: var(--cyan);
-  color: #111;
-  box-shadow: 0 0 10px var(--cyan);
-  border-color: var(--cyan);
-}
-
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   /* Nav padding adjustment */
@@ -273,7 +252,7 @@ body {
   font-size: 2rem;    /* modal title */
 }
 
-/* === "What's Happenin'" List Style === */
+/* === "What's Happenin' === */
 .articleList {
   display: flex;
   flex-direction: column;

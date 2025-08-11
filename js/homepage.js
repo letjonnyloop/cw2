@@ -1,109 +1,125 @@
-let gigsData = [];
-let gigsPerPage = 6;
-let currentIndex = 0;
-let filteredGigs = [];
-
 $(document).ready(function () {
-  // Load gigs from JSON
+  // === Modal Events ===
+  $(document).on("click", ".close-modal", closeModal);
+  $(document).on("click", ".modal-overlay", function (e) {
+    if (e.target === this) closeModal();
+  });
+
+  // === Load carousel from gigs.json ===
   $.getJSON("data/gigs.json", function (data) {
-    gigsData = data;
-
-    renderFeaturedCarousel(gigsData);
-
-    filteredGigs = gigsData; // Initialize filtered gigs with full list
-    currentIndex = 0;
-    displayGigsPaginated(filteredGigs, currentIndex, gigsPerPage);
+    renderFeaturedCarousel(data);
   });
 
-  // Attach filter handlers
-  $("#venueFilter, #dateFilter, #searchBoth, #genre-filter").on("input change", () => {
-    currentIndex = 0; // Reset pagination index on filter change
-    applyFilters();
+  // === Load articles from article.json ===
+  $.getJSON("data/article.json", function (data) {
+    renderLookAtThis(data.lookAtThis);
+    renderWhatsHappenin(data.whatsHappenin);
+    renderOutnAbout(data.outnAbout);
   });
-
-  $("#clearFilters").on("click", function () {
-    $("#venueFilter").val('');
-    $("#dateFilter").val('');
-    $("#searchBoth").val('');
-    $("#genre-filter").val('');
-    filteredGigs = gigsData;
-    currentIndex = 0;
-    displayGigsPaginated(filteredGigs, currentIndex, gigsPerPage);
-  });
-
-  // Load More button handler
-  $("#loadMoreBtn").on("click", function () {
-    currentIndex += gigsPerPage;
-    displayGigsPaginated(filteredGigs, currentIndex, gigsPerPage, true);
-  });
-
-  // jQuery UI Date Picker
-  $("#dateFilter").datepicker({ dateFormat: "dd/mm/yy" });
 });
 
-// Display gigs in paginated chunks, append if 'append' true
-function displayGigsPaginated(gigs, start, count, append = false) {
-  const gigList = $("#gigList");
-  const gigsToShow = gigs.slice(start, start + count);
+// === Look At This Articles ===
+function renderLookAtThis(articles) {
+  const container = $('#featuredArticlesContainer');
+  container.empty();
 
-  if (!append) gigList.empty();
-
-  if (gigsToShow.length === 0 && !append) {
-    gigList.append("<p>No gigs match your filters. Try adjusting your search.</p>");
-    $("#loadMoreBtn").hide();
-    return;
-  }
-
-  gigsToShow.forEach(gig => {
-    const card = `
-      <div class="gig-card">
-        <img src="images/${gig.image}" alt="${gig.artist} performing">
-        <div class="gig-info">
-          <h3>${gig.artist}</h3>
-          <p><strong>Venue:</strong> ${formatVenueName(gig.venue)}</p>
-          <p><strong>Date:</strong> ${gig.date}</p>
-          <p><strong>Genre:</strong> ${capitalize(gig.genre)}</p>
+  articles.forEach(article => {
+    const card = $(`
+      <div class="article-card">
+        <img src="${article.image}" alt="${article.title}">
+        <div class="article-details">
+          <h3 class="article-title">${article.title}</h3>
+          <p>${article.summary}</p>
         </div>
       </div>
-    `;
-    gigList.append(card);
+    `);
+    card.data("article", article); // store object safely (allows use of special characters !, é etc.)
+    container.append(card);
   });
-
-  // Show or hide Load More button
-  if (start + count >= gigs.length) {
-    $("#loadMoreBtn").hide();
-  } else {
-    $("#loadMoreBtn").show();
-  }
 }
 
-// Filter gigs based on inputs and reset pagination
-function applyFilters() {
-  const venue = $("#venueFilter").val().toLowerCase();
-  const date = $("#dateFilter").val();
-  const genre = $("#genre-filter").val().toLowerCase();
-  const search = $("#searchBoth").val().toLowerCase();
+// === What's Happenin ===
+function renderWhatsHappenin(articles) {
+  const container = $('#whatsHappeninContainer');
+  container.empty();
 
-  filteredGigs = gigsData.filter(gig => {
-    const matchVenue = !venue || gig.venue === venue;
-    const matchDate = !date || gig.date === date;
-    const matchGenre = !genre || gig.genre === genre;
-    const matchSearch =
-      !search ||
-      gig.artist.toLowerCase().includes(search) ||
-      formatVenueName(gig.venue).toLowerCase().includes(search);
-
-    return matchVenue && matchDate && matchGenre && matchSearch;
+  articles.forEach(article => {
+    const card = $(`
+      <div class="article-card">
+        <h4 class="article-title">${article.title}</h4>
+        <p>${article.summary}</p>
+      </div>
+    `);
+    card.data("article", article); // Similar to above, needed to allow safe storage of special character to allow string parsing
+    container.append(card);
   });
-
-  displayGigsPaginated(filteredGigs, currentIndex, gigsPerPage);
 }
 
-// Dynamic featured gigs carousel (unchanged)
+// === Out 'n About Gallery ===
+function renderOutnAbout(images) {
+  const container = $('#outnAboutImages');
+  container.empty();
+
+  images.forEach(img => {
+    const item = $(`
+      <div class="gallery-item">
+        <img src="${img.image}" alt="${img.alt}">
+        <p class="caption">${img.caption}</p>
+      </div>
+    `);
+    item.data("image", img); // Same as the others - storing special characters as .data to prevent parsing breaks
+    container.append(item);
+  });
+}
+
+// === Modal Triggers ===
+$(document).on("click", ".article-card", function () {
+  const article = $(this).data("article");
+
+  if (!article) return;
+
+  // Set modal content
+  $("#modalTitle").text(article.title || "No Title");
+  $("#modalImage").attr({
+    src: article.image || "",
+    alt: article.title || ""
+  });
+
+  $("#modalMeta").text(`By ${article.author || "Unknown"} – ${article.date || ""}`);
+
+  // Use content or fallback text if empty
+  $("#modalBody").html(article.content ? article.content : "<p>No additional content available.</p>");
+
+  // Show modal
+  $("#articleModal").fadeIn(200).addClass("show");
+});
+
+// Click handler for gallery images
+$(document).on("click", ".gallery-item", function () {
+  const img = $(this).data("image");
+  if (!img) return;
+
+  $("#modalTitle").text(""); // Clear title for gallery images
+  $("#modalImage").attr({
+    src: img.image || "",
+    alt: img.alt || ""
+  });
+  $("#modalMeta").text("");
+  $("#modalBody").html(`<p style="text-align:center; font-style:italic; color: var(--text-muted);">${img.caption || ""}</p>`);
+
+  $("#articleModal").fadeIn(200).addClass("show");
+});
+
+// === Modal Functions ===
+function closeModal() {
+  $("#articleModal").fadeOut(200).removeClass("show");
+}
+
+// === Featured Carousel ===
 function renderFeaturedCarousel(data) {
   const featuredGigs = data.filter(gig => gig.featured);
   const carousel = $(".carousel");
-  carousel.empty(); // Clear existing
+  carousel.empty();
 
   if (featuredGigs.length === 0) {
     carousel.append("<p>No featured events right now. Check back soon!</p>");
@@ -117,17 +133,16 @@ function renderFeaturedCarousel(data) {
         <div class="overlay">
           <h2>${gig.artist} – ${formatVenueName(gig.venue)}</h2>
           <p>${gig.date}</p>
-          <button type="button">View Event</button>
         </div>
       </div>
     `;
     carousel.append(slide);
   });
 
-  rotateSlides(); // Optional auto-rotation
+  rotateSlides();
 }
 
-// Carousel auto-rotation every 5s (unchanged)
+// === Carousel Rotation ===
 function rotateSlides() {
   let currentIndex = 0;
   const slides = $(".carousel .slide");
@@ -141,7 +156,7 @@ function rotateSlides() {
   }, 5000);
 }
 
-// Format venue key to readable name (unchanged)
+// === Venue Formatting ===
 function formatVenueName(key) {
   switch (key) {
     case "customhouse": return "Custom House Square";
@@ -154,7 +169,6 @@ function formatVenueName(key) {
   }
 }
 
-// Capitalize strings (e.g., genre) (unchanged)
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
+$(document).on("click", ".modal-content", function (e) {
+  e.stopPropagation();
+});
