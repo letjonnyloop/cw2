@@ -12,6 +12,76 @@
     --card-bg-end: #1b1b1b;
 }
 
+/* === Nav Bar === */
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: var(--gold);
+  color: #111;
+  box-shadow: 0 4px 12px rgba(214, 163, 57, 0.4);
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  color: #FFAA00;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow:
+    2px 2px 0 #00FFFF,
+    -2px -2px 0 #FF0000,
+    1px -1px 0 #000;
+  transform: skew(-10deg);
+  user-select: none;
+  cursor: default;
+}
+
+.topnav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.topnav a {
+  color: #111;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: 'Anton', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.topnav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 3px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+.topnav a:hover,
+.topnav a.active {
+  color: var(--cyan);
+}
+
+.topnav a:hover::after,
+.topnav a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 html, body {
     height: 100%;
     margin: 0;

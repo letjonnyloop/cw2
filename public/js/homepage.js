@@ -6,12 +6,12 @@ $(document).ready(function () {
   });
 
   // === Load carousel from gigs.json ===
-  $.getJSON("data/gigs.json", function (data) {
+  $.getJSON("../../data/gigs.json", function (data) {
     renderFeaturedCarousel(data);
   });
 
   // === Load articles from article.json ===
-  $.getJSON("data/article.json", function (data) {
+  $.getJSON("../../data/article.json", function (data) {
     renderLookAtThis(data.lookAtThis);
     renderWhatsHappenin(data.whatsHappenin);
     renderOutnAbout(data.outnAbout);
@@ -129,7 +129,7 @@ function renderFeaturedCarousel(data) {
   featuredGigs.forEach((gig, index) => {
     const slide = `
       <div class="slide ${index === 0 ? "active" : ""}">
-        <img src="images/${gig.image}" alt="${gig.artist} at ${formatVenueName(gig.venue)}">
+        <img src="${gig.image}" alt="${gig.artist} at ${formatVenueName(gig.venue)}">
         <div class="overlay">
           <h2>${gig.artist} – ${formatVenueName(gig.venue)}</h2>
           <p>${gig.date}</p>

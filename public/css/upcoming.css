@@ -1,4 +1,15 @@
-
+:root {
+  --gold: #d87315;       
+  --gold-dark: #c28e0c;  
+  --cyan: #00cbd8;       
+  --cyan-dark: #00b8c3;  
+  --bg-dark: #111111;
+  --bg-darker: #0a0a0a;
+  --text-light: #e0e0e0;
+  --text-muted: #ccc;
+  --card-bg-start: #222222;
+  --card-bg-end: #1b1b1b;
+}
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;

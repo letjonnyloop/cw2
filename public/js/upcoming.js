@@ -41,7 +41,7 @@ $(document).ready(function () {
                 <div class="gig-container">
                     <div class="gig-wrapper">
                         <h4 class="act-name">${gig.artist}</h4>
-                        <img alt="" class="gig-thumbnail" data-image-width="1631" data-image-height="1080" src="images/${gig.image}">
+                        <img alt="" class="gig-thumbnail" data-image-width="1631" data-image-height="1080" src="${gig.image}">
                         <div class="line-horizontal"></div>
                         <p class="gig-description">${gig.description}</p>
                         <div class="gig-date-time-venue">
@@ -101,7 +101,7 @@ $(document).ready(function () {
     
 
     // Fetch data and display on load
-    $.getJSON('data/gigs.json', function (data) {
+    $.getJSON('../../data/gigs.json', function (data) {
         gigsData = data;
         displayGigs(gigsData);
     });
