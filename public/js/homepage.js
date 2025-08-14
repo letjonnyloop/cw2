@@ -50,7 +50,7 @@ function renderWhatsHappenin(articles) {
         <p>${article.summary}</p>
       </div>
     `);
-    card.data("article", article); // Similar to above, needed to allow safe storage of special character to allow string parsing
+    card.data("article", article); // similar to above, needed to allow safe storage of special characters by saving to memory to load
     container.append(card);
   });
 }
@@ -67,7 +67,7 @@ function renderOutnAbout(images) {
         <p class="caption">${img.caption}</p>
       </div>
     `);
-    item.data("image", img); // Same as the others - storing special characters as .data to prevent parsing breaks
+    item.data("image", img); // same as the others - storing special characters as .data 
     container.append(item);
   });
 }
@@ -99,7 +99,7 @@ $(document).on("click", ".gallery-item", function () {
   const img = $(this).data("image");
   if (!img) return;
 
-  $("#modalTitle").text(""); // Clear title for gallery images
+  $("#modalTitle").text(""); // clear title for gallery images
   $("#modalImage").attr({
     src: img.image || "",
     alt: img.alt || ""
