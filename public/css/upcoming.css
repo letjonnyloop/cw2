@@ -262,7 +262,7 @@ body {
   padding: 0.6rem 1rem;
   border-radius: 8px;
   border: 2px solid var(--gold);
-  background-color: var(--card-bg-start);
+  background-color: #594a4a;
   color: var(--text-light);
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
