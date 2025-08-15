@@ -1,4 +1,4 @@
-/* === Main colour variables === */
+/*  Main colour variables */
 :root {
   --gold: #d87315;       
   --gold-dark: #c28e0c;  
@@ -91,7 +91,7 @@ body {
   transform-origin: left;
 }
 
-/* === CAROUSEL === */
+/* CAROUSEL */
 .carousel {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -141,7 +141,7 @@ body {
   text-shadow: 0 0 8px var(--gold);
 }
 
-/* === RESPONSIVE === */
+/*  RESPONSIVE  */
 @media (max-width: 768px) {
   /* Nav padding adjustment */
   .logo-nav {
@@ -149,7 +149,7 @@ body {
   }
 }
 
-/* === ARTICLES === */
+/* ARTICLES */
 .articles {
   max-width: 1200px;
   margin: 3rem auto;
@@ -211,7 +211,7 @@ body {
 
 .article-card h4 {
   font-family: 'Anton', sans-serif;
-  font-size: 1.4rem; /* or whatever size fits */
+  font-size: 1.4rem; 
   color: var(--gold);
   text-shadow: 0 0 4px var(--gold);
 }
@@ -230,7 +230,7 @@ body {
   margin-top: 0;
 }
 
-/* === "What's Happenin' === */
+/* "What's Happenin' */
 .articleList {
   display: flex;
   flex-direction: column;
@@ -262,7 +262,7 @@ body {
   line-height: 1.4;
 }
 
-/* === "Out 'n About" Image Gallery === */
+/* "Out 'n About" Image Gallery */
 .outnAbout .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -284,7 +284,7 @@ body {
   border-color: var(--cyan);
 }
 
-/* === Responsive Typography === */
+/* Responsive Typography */
 @media (max-width: 768px) {
   .articles h2 {
     font-size: 1.6rem;
@@ -300,7 +300,7 @@ body {
   }
 }
 
-/* === FOOTER === */
+/* FOOTER */
 #mainFooter {
   background: var(--bg-dark);
   border-top: 3px solid var(--gold);
@@ -326,7 +326,7 @@ body {
   margin-top: 0;
 }
 
-/* === MODAL === */
+/* MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -386,5 +386,5 @@ body {
   color: var(--gold);
   text-shadow: 0 0 4px var(--gold);
   margin-top: 0;
-  font-size: 2rem; /* bigger size for modal */
+  font-size: 2rem;
 }

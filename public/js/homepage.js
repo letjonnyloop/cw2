@@ -1,16 +1,16 @@
 $(document).ready(function () {
-  // === Modal Events ===
+  // Modal Events
   $(document).on("click", ".close-modal", closeModal);
   $(document).on("click", ".modal-overlay", function (e) {
     if (e.target === this) closeModal();
   });
 
-  // === Load carousel from gigs.json ===
+  // Load carousel from gigs.json
   $.getJSON("../../data/gigs.json", function (data) {
     renderFeaturedCarousel(data);
   });
 
-  // === Load articles from article.json ===
+  // Load articles from article.json
   $.getJSON("../../data/article.json", function (data) {
     renderLookAtThis(data.lookAtThis);
     renderWhatsHappenin(data.whatsHappenin);
@@ -18,7 +18,7 @@ $(document).ready(function () {
   });
 });
 
-// === Look At This Articles ===
+// Look At This Articles 
 function renderLookAtThis(articles) {
   const container = $('#featuredArticlesContainer');
   container.empty();
@@ -33,12 +33,12 @@ function renderLookAtThis(articles) {
         </div>
       </div>
     `);
-    card.data("article", article); // store object safely (allows use of special characters !, é etc.)
+    card.data("article", article); // Store object safely (allows use of special characters !, é etc.)
     container.append(card);
   });
 }
 
-// === What's Happenin ===
+// What's Happenin 
 function renderWhatsHappenin(articles) {
   const container = $('#whatsHappeninContainer');
   container.empty();
@@ -50,12 +50,12 @@ function renderWhatsHappenin(articles) {
         <p>${article.summary}</p>
       </div>
     `);
-    card.data("article", article); // similar to above, needed to allow safe storage of special characters by saving to memory to load
+    card.data("article", article); // Similar to above, needed to allow safe storage of special characters by saving to memory to load
     container.append(card);
   });
 }
 
-// === Out 'n About Gallery ===
+// Out 'n About Gallery
 function renderOutnAbout(images) {
   const container = $('#outnAboutImages');
   container.empty();
@@ -67,12 +67,12 @@ function renderOutnAbout(images) {
         <p class="caption">${img.caption}</p>
       </div>
     `);
-    item.data("image", img); // same as the others - storing special characters as .data 
+    item.data("image", img); // Same as the others - storing special characters as .data 
     container.append(item);
   });
 }
 
-// === Modal Triggers ===
+// Modal Triggers
 $(document).on("click", ".article-card", function () {
   const article = $(this).data("article");
 
@@ -99,7 +99,7 @@ $(document).on("click", ".gallery-item", function () {
   const img = $(this).data("image");
   if (!img) return;
 
-  $("#modalTitle").text(""); // clear title for gallery images
+  $("#modalTitle").text(""); // Clear title for gallery images
   $("#modalImage").attr({
     src: img.image || "",
     alt: img.alt || ""
@@ -110,12 +110,12 @@ $(document).on("click", ".gallery-item", function () {
   $("#articleModal").fadeIn(200).addClass("show");
 });
 
-// === Modal Functions ===
+// Modal Functions
 function closeModal() {
   $("#articleModal").fadeOut(200).removeClass("show");
 }
 
-// === Featured Carousel ===
+// Featured Carousel 
 function renderFeaturedCarousel(data) {
   const featuredGigs = data.filter(gig => gig.featured);
   const carousel = $(".carousel");
@@ -142,7 +142,7 @@ function renderFeaturedCarousel(data) {
   rotateSlides();
 }
 
-// === Carousel Rotation ===
+// Carousel Rotation 
 function rotateSlides() {
   let currentIndex = 0;
   const slides = $(".carousel .slide");
@@ -156,7 +156,7 @@ function rotateSlides() {
   }, 5000);
 }
 
-// === Venue Formatting ===
+// Venue Formatting
 function formatVenueName(key) {
   switch (key) {
     case "customhouse": return "Custom House Square";
